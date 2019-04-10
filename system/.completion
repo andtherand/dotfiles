@@ -1,11 +1,8 @@
+#!/bin/bash
 # Bash
 
-if is-executable brew; then
-  BREW_PREFIX=$(brew --prefix)
-  BASH_COMPLETION="$BREW_PREFIX/share/bash-completion/bash_completion"
-  . "$BASH_COMPLETION"
-  unset BREW_PREFIX BASH_COMPLETION
-fi
+export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d"
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
 # Dotfiles
 

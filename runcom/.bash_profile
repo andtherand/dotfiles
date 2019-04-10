@@ -27,7 +27,7 @@ for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,grep,
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
-if is-macos; then
+if [ is-macos ]; then
   for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias,function,path}.macos; do
     [ -f "$DOTFILE" ] && . "$DOTFILE"
   done
@@ -54,3 +54,6 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE EXTRAFILE
 # Export
 
 export DOTFILES_DIR DOTFILES_EXTRA_DIR
+export HOMEBREW_GITHUB_API_TOKEN=63dfb739804dc28ede764dda325dcc519931d0df
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

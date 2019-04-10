@@ -11,3 +11,5 @@ superstatic
 svgo
 tldr
 underscore-cli
+eslint
+stylelint
