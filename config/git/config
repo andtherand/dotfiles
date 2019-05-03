@@ -41,6 +41,7 @@
 	p = push
 	pf = push --force
 	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  publish = "git push -u origin $(git rev-parse --abbrev-ref HEAD)"
 	show-ignored = "! git clean -ndX | perl -pe 's/Would remove/Ignored:/'"
 	st = status
 	stl = ls-files -m -o --exclude-standard
@@ -67,3 +68,6 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[user]
+	name = Andy Ruck
+	email = ruck.andreas@territory.de

@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
-NVM_DIR=~/.nvm
+# NVM_DIR=~/.nvm
 
-if [ -f "$NVM_DIR/nvm.sh" ]; then
-  export NVM_DIR
-  source "$NVM_DIR/nvm.sh"
-fi
+# if [ -f "$NVM_DIR/nvm.sh" ]; then
+#   export NVM_DIR
+#   source "$NVM_DIR/nvm.sh"
+# fi
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
