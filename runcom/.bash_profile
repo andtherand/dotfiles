@@ -56,3 +56,6 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE EXTRAFILE
 export DOTFILES_DIR DOTFILES_EXTRA_DIR
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Env vars per directory
+eval "$(direnv hook bash)"
